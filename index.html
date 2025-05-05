@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Modern Shop</title>
+  <style>
+   
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQekIbYVDbBIqmspiLyT-XXdEKK7VciM5dsdg&s') no-repeat center center fixed;
+  background-size: cover;
+  color: #111827;
+  line-height: 1.6;
+}
+
+
+    a {
+      text-decoration: none;
+    }
+
+    
+    header {
+      background: white;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 60px;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    .logo {
+      font-size: 2rem;
+      font-weight: 700;
+      color: #1e3a8a;
+    }
+
+    .logo span {
+      color: #3b82f6;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 30px;
+    }
+    nav a {
+  color: #374151;
+  font-weight: 600;
+  font-size: 1rem;
+  padding: 8px 16px;
+  border-radius: 6px;
+  transition: all 0.3s ease;
+}
+
+nav a:hover {
+  background-color: #2563eb;
+  color: #ffffff;
+}
+
+
+    
+    .hero {
+      background: url('https://images.unsplash.com/photo-1585386959984-a415522e3f9f') no-repeat center center/cover;
+      height: 85vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0 20px;
+    }
+
+    .hero-content {
+      background: rgba(0, 0, 0, 0.65);
+      padding: 50px 30px;
+      border-radius: 12px;
+      text-align: center;
+      color: white;
+      max-width: 600px;
+    }
+
+    .hero h1 {
+      font-size: 3rem;
+      margin-bottom: 20px;
+      font-weight: 700;
+    }
+
+    .hero p {
+      font-size: 1.3rem;
+      margin-bottom: 30px;
+    }
+
+    .btn {
+      background-color: #3b82f6;
+      padding: 14px 32px;
+      color: white;
+      border-radius: 8px;
+      font-size: 1.1rem;
+      transition: background 0.3s ease;
+      font-weight: 600;
+      display: inline-block;
+    }
+
+    .btn:hover {
+      background-color: #2563eb;
+    }
+
+    
+    .section-title {
+      text-align: center;
+      margin: 60px 0 30px;
+      font-size: 2.5rem;
+      color: #1e40af;
+      font-weight: bold;
+    }
+
+    
+    .product-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 30px;
+      padding: 0 40px 60px;
+    }
+
+    .product-card {
+      background: white;
+      border-radius: 14px;
+      padding: 20px;
+      text-align: center;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .product-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 12px 28px rgba(0, 0, 0, 0.1);
+    }
+
+    .product-card img {
+      width: 100%;
+      border-radius: 10px;
+      margin-bottom: 15px;
+    }
+
+    .product-card h3 {
+      font-size: 1.2rem;
+      margin-bottom: 8px;
+      color: #111827;
+    }
+
+    .product-card p {
+      font-size: 1.05rem;
+      color: #6b7280;
+    }
+
+    .product-card button {
+      margin-top: 15px;
+      padding: 10px 20px;
+      background-color: #10b981;
+      border: none;
+      color: white;
+      border-radius: 6px;
+      font-size: 1rem;
+      cursor: pointer;
+      font-weight: 600;
+      transition: background-color 0.3s;
+    }
+
+    .product-card button:hover {
+      background-color: #059669;
+    }
+
+    footer {
+      background: rgba(255, 255, 255, 0.7);  
+      color: #111827; 
+      text-align: center;
+      padding: 30px;
+      margin-top: 40px;
+      font-size: 0.95rem;
+    }
+
+    @media (max-width: 768px) {
+      header {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 20px 30px;
+      }
+
+      nav ul {
+        flex-direction: column;
+        width: 100%;
+        padding: 10px 0;
+        gap: 15px;
+      }
+
+      .hero h1 {
+        font-size: 2rem;
+      }
+
+      .hero p {
+        font-size: 1rem;
+      }
+
+      .section-title {
+        font-size: 2rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="logo">Modern<span>Shop</span></div>
+    <nav>
+      <ul>
+        <li><a href="./index.html">Home</a></li>
+        <li><a href="./pages/shop.html">Shop</a></li>
+        <li><a href="./pages/contact.html">Contact</a></li>
+        <li><a href="./pages/cart.html">Cart</a></li>
+      </ul>
+    </nav>
+  </header>
+
+ 
+  <section class="hero">
+    <div class="hero-content">
+      <h1>Upgrade Your Style</h1>
+      <p>Shop the latest fashion and electronics with exclusive deals</p>
+      <a href="#" class="btn">Start Shopping</a>
+    </div>
+  </section>
+
+  
+  <main>
+    <h2 class="section-title">Featured Products</h2>
+    <section class="product-grid">
+      <div class="product-card">
+        <img src="../images/kk.webp" alt="Wireless Headphones" />
+        <h3>Wireless Headphones</h3>
+        <p>₹1,999 </p>
+        <button>Add to Cart</button>
+      </div>
+      <div class="product-card">
+        <img src="../images/smartwatch2.webp" alt="Smartwatch Pro" />
+        <h3>Smartwatch Pro</h3>
+        <p> ₹3,000 </p>
+        <button>Add to Cart</button>
+      </div>
+      <div class="product-card">
+        <img src="../images/bag" alt="Leather Backpack" />
+        <h3>Leather Backpack</h3>
+        <p>₹2,467</p>
+        <button>Add to Cart</button>
+      </div>
+      <div class="product-card">
+        <img src="../images/shoes.webp" alt="Sports Sneakers" />
+        <h3>Sports Sneakers</h3>
+        <p>₹5,000</p>
+        <button>Add to Cart</button>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 ModernShop. Built with ♥ for style and technowell lovers.</p>
+  </footer>
+
+</body>
+</html>

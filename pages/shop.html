@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Shop</title>
+<style>
+   
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f5f7fa;
+  color: #333;
+  line-height: 1.6;
+}
+
+
+header {
+  background: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 60px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.logo {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #1e40af;
+}
+
+.logo span {
+  color: #2563eb;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+}
+
+nav a {
+  text-decoration: none;
+  color: #374151;
+  font-weight: 500;
+  padding: 8px 15px;
+  border-radius: 6px;
+  transition: all 0.3s ease;
+}
+
+nav a:hover {
+  background-color: #2563eb;
+  color: #ffffff;
+}
+
+
+
+.shop-section {
+  display: flex;
+  padding: 40px;
+  gap: 40px;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.filters {
+  width: 250px;
+  background-color: white;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+}
+
+.filters h2 {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+}
+
+.filter-category,
+.filter-price {
+  margin-bottom: 20px;
+}
+
+.filter-category select,
+.filter-price input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 1rem;
+}
+
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  width: calc(100% - 300px);
+}
+
+.product-card {
+  background-color: white;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  transition: transform 0.3s;
+}
+
+.product-card:hover {
+  transform: scale(1.05);
+}
+
+.product-card img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.product-card h3 {
+  font-size: 1.2rem;
+  margin-top: 15px;
+}
+
+.price {
+  font-size: 1.3rem;
+  color: #3b82f6;
+  margin: 10px 0;
+}
+
+.add-to-cart {
+  background-color: #10b981;
+  color: white;
+  padding: 10px 25px;
+  border: none;
+  border-radius: 6px;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  margin-top: 10px;
+}
+
+.add-to-cart:hover {
+  background-color: #059669;
+}
+
+
+footer {
+  background: rgba(255, 255, 255, 0.7);  
+  color: #111827;
+  text-align: center;
+  padding: 40px 20px;
+  margin-top: 60px; 
+  font-size: 1rem;
+  backdrop-filter: blur(5px); 
+  border-top: 1px solid #cbd5e1; 
+}
+
+
+</style>
+</head>
+<body>
+  <header>
+    <div class="logo">Modern<span>Shop</span></div>
+    <nav>
+      <ul>
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="../pages/shop.html">Shop</a></li>
+        <li><a href="../pages/contact.html">Contact</a></li>
+        <li><a href="../pages/cart.html">Cart</a></li>
+      </ul>
+    </nav>
+  </header>
+
+ 
+  <section class="shop-section">
+    <div class="filters">
+      <h2>Filters</h2>
+      <div class="filter-category">
+        <label for="category">Category:</label>
+        <select id="category">
+          <option value="electronics">Electronics</option>
+          <option value="fashion">Fashion</option>
+          <option value="home">Home & Kitchen</option>
+          <option value="accessories">Accessories</option>
+        </select>
+      </div>
+      <div class="filter-price">
+        <label for="price-range">Price Range:</label>
+        <input type="range" id="price-range" min="0" max="500" step="10" value="250" />
+    
+      </div>
+    </div>
+
+    <div class="product-grid">
+      <div class="product-card">
+        <img src="../images/kk.webp" alt="Product" />
+        <h3>Wireless Headphones</h3>
+        <p class="price">₹4,979</p>
+        <button class="add-to-cart">Add to Cart</button>
+      </div>
+
+      <div class="product-card">
+        <img src="../images/watch.jpg"alt="Product" />
+        <h3>Smartwatch Pro</h3>
+        <p class="price">₹10,799</p>
+        <button class="add-to-cart">Add to Cart</button>
+      </div>
+
+      <div class="product-card">
+        <img src="../images/speaker.jpg" alt="Product" />
+        <h3>Portable Speaker</h3>
+        <p class="price">₹6,639</p>
+        <button class="add-to-cart">Add to Cart</button>
+      </div>
+
+      <div class="product-card">
+        <img src="../images/noise cancle.jpg" alt="Product" />
+        <h3>Noise Cancelling Headphones</h3>
+        <p class="price">₹7,479</p>
+        <button class="add-to-cart">Add to Cart</button>
+      </div>
+
+      <div class="product-card">
+        <img src="../images/phone" alt="Product" />
+        <h3>Smartphone X</h3>
+        <p class="price">₹41,499</p>
+        <button class="add-to-cart">Add to Cart</button>
+      </div>
+
+      <div class="product-card">
+        <img src="../images/fitness.jpg" alt="Product" />
+        <h3>Fitness Tracker</h3>
+        <p class="price">₹3,319</p>
+        <button class="add-to-cart">Add to Cart</button>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 ModernShop. Built with ♥ for style and tech lovers.</p>
+  </footer>
+</body>
+</html>

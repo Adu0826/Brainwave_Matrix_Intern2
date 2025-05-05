@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contact Us</title>
+ <style>
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f5f7fa;
+  color: #1f2937;
+  line-height: 1.6;
+}
+
+
+header {
+  background: #ffffff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 60px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.logo {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #1e40af;
+}
+
+.logo span {
+  color: #3b82f6;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+}
+
+nav a {
+  text-decoration: none;
+  color: #374151;
+  font-weight: 500;
+  padding: 8px 15px;
+  border-radius: 6px;
+  transition: all 0.3s ease;
+}
+
+nav a:hover {
+  background-color: #2563eb;
+  color: white;
+}
+
+
+.contact-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 60px 40px;
+  gap: 60px;
+  flex-wrap: wrap;
+  background-color: #ffffff;
+}
+
+.contact-info {
+  flex: 1 1 45%;
+}
+
+.contact-info h1 {
+  font-size: 2.8rem;
+  color: #1e40af;
+  margin-bottom: 20px;
+}
+
+.contact-info p {
+  font-size: 1.1rem;
+  color: #4b5563;
+  margin-bottom: 20px;
+}
+
+.contact-details {
+  font-size: 1rem;
+  color: #374151;
+  line-height: 1.8;
+}
+
+.contact-details p {
+  margin: 6px 0;
+}
+
+.map iframe {
+  width: 100%;
+  height: 300px;
+  margin-top: 20px;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+}
+
+.contact-form {
+  flex: 1 1 45%;
+  background: #f9fafb;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+}
+
+.contact-form form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.contact-form label {
+  font-size: 1.05rem;
+  font-weight: 500;
+  color: #374151;
+}
+
+.contact-form input,
+.contact-form textarea {
+  padding: 14px;
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+  font-size: 1rem;
+  background: #fff;
+  transition: border 0.3s ease;
+  box-shadow: inset 0 1px 3px rgba(0,0,0,0.05);
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  border-color: #2563eb;
+  outline: none;
+}
+
+.contact-form textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+.contact-form button {
+  background-color: #3b82f6;
+  color: white;
+  padding: 14px 28px;
+  border: none;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.contact-form button:hover {
+  background-color: #2563eb;
+}
+
+
+footer {
+  background: rgba(255, 255, 255, 0.7);  
+  color: #111827;  
+  text-align: center;
+  padding: 40px 20px;
+  margin-top: 90px;
+  font-size: 1rem;
+  backdrop-filter: blur(5px);
+  border-top: 1px solid #cbd5e1;
+}
+
+footer a {
+  color: #60a5fa;  
+  text-decoration: none;
+}
+
+footer a:hover {
+  color: #2563eb;  
+}
+
+
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 20px 30px;
+  }
+
+  nav ul {
+    flex-direction: column;
+    width: 100%;
+    padding: 10px 0;
+    gap: 15px;
+  }
+
+  .contact-section {
+    flex-direction: column;
+    padding: 40px 20px;
+    gap: 40px;
+  }
+
+  .contact-info h1 {
+    font-size: 2rem;
+  }
+
+  .contact-form {
+    padding: 20px;
+  }
+}
+
+
+ </style>
+</head>
+<body>
+  <header>
+    <div class="logo">Modern<span>Shop</span></div>
+    <nav>
+      <ul>
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="../pages/shop.html">Shop</a></li>
+        <li><a href="../pages/contact.html">Contact</a></li>
+        <li><a href="../pages/cart.html">Cart</a></li>
+      </ul>
+    </nav>
+  </header>
+
+ 
+  <section class="contact-section">
+    <div class="contact-info">
+      <h1>Get In Touch</h1>
+      <p>Have any questions? Feel free to reach out to us!</p>
+
+      <div class="contact-details">
+        <p><strong>Email:</strong> support@modernshop.com</p>
+        <p><strong>Phone:</strong> +1 (123) 456-7890</p>
+      </div>
+
+     
+      <div class="map">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2495.2255501915564!2d-0.13133168422814256!3d51.50735064524565!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48761b2e0bbd00ff%3A0xf7842793f5474b92!2sLondon!5e0!3m2!1sen!2suk!4v1624945374702!5m2!1sen!2suk" width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+      </div>
+    </div>
+
+  
+    <div class="contact-form">
+      <form action="#">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" placeholder="Your Name" required />
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" placeholder="Your Email" required />
+
+        <label for="message">Message:</label>
+        <textarea id="message" name="message" rows="5" placeholder="Your Message" required></textarea>
+
+        <button type="submit">Send Message</button>
+      </form>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 ModernShop. Built with ♥ for style and tech lovers.</p>
+  </footer>
+</body>
+</html>

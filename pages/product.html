@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Product Details</title>
+  <style>
+   
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f5f7fa;
+  color: #333;
+  line-height: 1.6;
+}
+
+
+header {
+  background: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 60px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.logo {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #1e40af;
+}
+
+.logo span {
+  color: #2563eb;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+}
+
+nav a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+nav a:hover {
+  color: #2563eb;
+}
+
+
+.product-detail {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  justify-content: center;
+  padding: 40px;
+}
+
+.product-images {
+  flex: 1 1 45%;
+}
+
+.main-img {
+  width: 100%;
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+}
+
+.thumbnail-images {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.thumbnail-images img {
+  width: 30%;
+  border-radius: 8px;
+  transition: transform 0.3s;
+}
+
+.thumbnail-images img:hover {
+  transform: scale(1.1);
+}
+
+.product-info {
+  flex: 1 1 45%;
+}
+
+.product-info h1 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.price {
+  font-size: 1.6rem;
+  color: #3b82f6;
+  margin-bottom: 20px;
+}
+
+.short-description {
+  font-size: 1rem;
+  margin-bottom: 20px;
+  color: #666;
+}
+
+.options {
+  display: flex;
+  gap: 30px;
+  margin-bottom: 20px;
+}
+
+.size-options select,
+.color-options .color-palette {
+  display: flex;
+  gap: 10px;
+}
+
+.size-options select {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 1rem;
+}
+
+.color-palette .color {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.color.red {
+  background-color: #f87171;
+}
+
+.color.blue {
+  background-color: #60a5fa;
+}
+
+.color.black {
+  background-color: #111;
+}
+
+.add-to-cart {
+  background-color: #3b82f6;
+  color: white;
+  padding: 12px 25px;
+  border: none;
+  border-radius: 6px;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  width: 100%;
+}
+
+.add-to-cart:hover {
+  background-color: #2563eb;
+}
+
+footer {
+  background: #1f2937;
+  color: white;
+  text-align: center;
+  padding: 25px;
+  margin-top: 40px;
+}
+
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo">Modern<span>Shop</span></div>
+    <nav>
+      <ul>
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="../pages/shop.html">Shop</a></li>
+        <li><a href="../pages/contact.html">Contact</a></li>
+        <li><a href="../pages/cart.html">Cart</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  
+  <section class="product-detail">
+    <div class="product-images">
+      <img src="https://via.placeholder.com/400x400" alt="Product" class="main-img"/>
+      <div class="thumbnail-images">
+        <img src="https://via.placeholder.com/100x100" alt="Thumbnail" />
+        <img src="https://via.placeholder.com/100x100" alt="Thumbnail" />
+        <img src="https://via.placeholder.com/100x100" alt="Thumbnail" />
+      </div>
+    </div>
+
+    <div class="product-info">
+      <h1>Wireless Headphones</h1>
+      <p class="price">$59.99</p>
+      <p class="short-description">Enjoy high-quality sound and a comfortable design with these wireless headphones. Perfect for any music lover!</p>
+      
+    
+      <div class="options">
+        <div class="size-options">
+          <label for="size">Size:</label>
+          <select id="size">
+            <option value="small">Small</option>
+            <option value="medium">Medium</option>
+            <option value="large">Large</option>
+          </select>
+        </div>
+        <div class="color-options">
+          <label for="color">Color:</label>
+          <div class="color-palette">
+            <div class="color red"></div>
+            <div class="color blue"></div>
+            <div class="color black"></div>
+          </div>
+        </div>
+      </div>
+      
+      
+      <button class="add-to-cart">Add to Cart</button>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 ModernShop. Built with ♥ for style and tech lovers.</p>
+  </footer>
+</body>
+</html>
